@@ -14,20 +14,23 @@ body {
     background: linear-gradient(to bottom, #ffffff, #faf7f0);
     font-family: 'Cormorant Garamond', serif;
     color: #4a4a4a;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
+/* Container */
 .container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
+/* Card */
 .card {
-    width: 85%;
+    width: 100%;
     max-width: 720px;
-    padding: 60px 45px;
+    padding: 50px 35px;
     text-align: center;
     position: relative;
     background: #fffdf9;
@@ -40,21 +43,22 @@ body {
     border: 1.5px solid rgba(212,175,55,0.6);
 }
 
-/* 🌿 Floral SVG */
+/* 🌿 Floral */
 .flower {
     position: absolute;
-    width: 160px;
-    opacity: 0.55;
+    width: 140px;
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .top-left {
-    top: -20px;
-    left: -20px;
+    top: -25px;
+    left: -25px;
 }
 
 .bottom-right {
-    bottom: -20px;
-    right: -20px;
+    bottom: -25px;
+    right: -25px;
     transform: rotate(180deg);
 }
 
@@ -73,7 +77,7 @@ body {
     opacity: 0;
     transform: translateY(25px);
     transition: all 1.2s ease;
-    margin: 14px 0;
+    margin: 12px 0;
     font-size: 20px;
     line-height: 1.7;
 }
@@ -83,16 +87,58 @@ body {
     transform: translateY(0);
 }
 
+/* Arabic */
 .arabic {
-    font-size: 26px;
+    font-size: 24px;
     margin-top: 25px;
     color: #6a8f6a;
 }
 
+/* Footer */
 .footer {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 18px;
     color: #6b6b6b;
+}
+
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+
+    .card {
+        padding: 35px 20px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .line {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .arabic {
+        font-size: 20px;
+    }
+
+    .footer {
+        font-size: 15px;
+    }
+
+    .flower {
+        width: 110px;
+        opacity: 0.4;
+    }
+
+    .top-left {
+        top: -20px;
+        left: -20px;
+    }
+
+    .bottom-right {
+        bottom: -20px;
+        right: -20px;
+    }
 }
 </style>
 </head>
@@ -102,7 +148,7 @@ body {
 <div class="container">
     <div class="card">
 
-        <!-- 🌿 Floral SVG Top Left -->
+        <!-- Floral -->
         <svg class="flower top-left" viewBox="0 0 200 200">
             <path d="M20,150 C40,100 80,80 120,100 C150,120 170,90 180,60" 
                   stroke="#6a8f6a" stroke-width="2" fill="none"/>
@@ -110,7 +156,6 @@ body {
             <circle cx="150" cy="90" r="5" fill="#b8962e"/>
         </svg>
 
-        <!-- 🌿 Floral SVG Bottom Right -->
         <svg class="flower bottom-right" viewBox="0 0 200 200">
             <path d="M20,150 C40,100 80,80 120,100 C150,120 170,90 180,60" 
                   stroke="#6a8f6a" stroke-width="2" fill="none"/>
